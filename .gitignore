@@ -1,7 +1,10 @@
 /node_modules
 /build
 
+dev.js
+
 .DS_store
+
 
 npm-debug.log*
 yarn-dubug.log*
