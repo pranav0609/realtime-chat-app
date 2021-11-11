@@ -1,0 +1,1 @@
+all the photos, videos, audio files will be stored here as local storage apart from db.
