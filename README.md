@@ -15,5 +15,5 @@ Functionalities included in the project (currently):
 4) Video streaming
 
 Further plans:
-Integrate video calling into the platform using WebRTC
-Anonymous chat features like Omegle.
+1) Integrate video calling into the platform using WebRTC
+2) Anonymous chat features like Omegle.
