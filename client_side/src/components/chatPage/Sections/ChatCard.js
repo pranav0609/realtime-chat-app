@@ -6,7 +6,21 @@ function ChatCard(props) {
     return (
         <div style={{ width: '100%' }}>
             <Comment
-                author={props.sender.name}
+                author={<b style = {{
+
+                    color: 'black',
+
+                    fontSize: "150%"
+
+                }}>{                        
+
+                    props.sender.name
+
+                    }
+
+                </b>
+
+            }
                 
                 content={
                     props.message.substring(0, 8) === "uploads\\" ?
@@ -31,7 +45,21 @@ function ChatCard(props) {
                 }
                 datetime={
                     <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-                        <span>{moment().fromNow()}</span>
+                        <span style = {{
+
+color: 'grey'
+
+}}>
+
+<b>
+
+{moment().fromNow()}
+
+</b>
+
+
+
+</span>
                     </Tooltip>
                 }
             />

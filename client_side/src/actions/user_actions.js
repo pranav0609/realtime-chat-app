@@ -5,6 +5,7 @@ import {
     REGISTER_USER,
     AUTH_USER,
     LOGOUT_USER,
+    FEEDBACK_USER,
 } from "./types"
 
 export function loginUser(dataToSubmit) {
@@ -46,4 +47,22 @@ export function logoutUser(){
         type: LOGOUT_USER,
         payload: request
     }
+}
+
+export function feedbackUser(dataToSubmit) {
+
+    const request = axios.post('/api/users/about', dataToSubmit)
+
+    .then(response => response.data)
+
+
+
+    return {
+
+        type: FEEDBACK_USER,
+
+        payload: request
+
+    }
+
 }

@@ -8,6 +8,7 @@ import {getChats, afterPostMessage} from '../../actions/chat_actions';
 import ChatCard from "./Sections/ChatCard";
 import Dropzone from 'react-dropzone';
 import Axios from 'axios';
+import background from "./chat_bg.jpg"
 
 export class ChatPage extends Component {
 
@@ -48,6 +49,13 @@ export class ChatPage extends Component {
 
     onDrop = (files) => {
         console.log(files);
+
+        
+        if (this.props.user.userData && !this.props.user.userData.isAuth) {
+            return alert('Please Log in first');
+        }
+
+
         let formData = new FormData;
         const config = {
             header: { 'content-type': 'multitype/form-data' }
@@ -77,6 +85,13 @@ export class ChatPage extends Component {
 
     submitChatMessage = (e) => {
         e.preventDefault();
+
+        
+        if (this.props.user.userData && !this.props.user.userData.isAuth) {
+            return alert('Please Log in first');
+        }
+
+
         let chatMessage = this.state.chatMessage;
         let userId = this.props.user.userData._id;
         let userName = this.props.user.userData.name;
@@ -98,11 +113,21 @@ export class ChatPage extends Component {
     render() {
         return (
             <React.Fragment>
-                <div>
-                    <p style={{ fontSize: '2rem', textAlign: 'center' }}> Real Time Chat</p>
+                
+                <div style={{ 
+                backgroundImage: `url(${background})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                width: '100vw',
+                height: '105vh'
+                }}>
+                    <div>
+                    <p style={{ fontSize: '2rem', textAlign: 'center', color: 'black'}}> 
+                    <b>AllChat</b>
+                    </p>
                 </div>
-
-                <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                <div style={{maxWidth: '800px', margin: '0 auto' }}>
                     <div className="infinite-container" style={{ height: '500px', overflowY: 'scroll' }}>                        
                         
                         {this.props.chats && (
@@ -152,6 +177,8 @@ export class ChatPage extends Component {
                         </Form>
                     </Row>
                 </div>
+                </div>
+                
             </React.Fragment>
         )
     }

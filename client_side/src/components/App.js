@@ -8,6 +8,7 @@ import Home from "./home/index"
 import Register from "./LoginRegister/register"
 import ChatPage from "./chatPage/chatPage"
 import NavBar from "./NavBar/NavBar";
+import Footer from "./footer/footer"
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
           <Route path="/" component={Auth(Home, null)} />
 
         </Switch>
-      </div></>
+      </div>
+      <Footer />
+      </>
     
   );
 }
