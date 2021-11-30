@@ -9,6 +9,7 @@ const cookieParser = require('cookie-parser');
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 const { User } = require('./models/user');
+const { Message } = require('./models/message');
 const { Chat } = require('./models/chat')
 const config = require('./configurations/keys');
 const { auth } = require('./middleware/auth');
@@ -102,6 +103,26 @@ app.post('/api/users/register', async (req, res) => {
             userData: data
         });
     })
+})
+
+app.post('/api/users/about', async (req, res) => {
+
+    const message = new Message(req.body);
+
+    message.save((err, data) => {
+
+        if(err) return res.json({success: false, err});
+
+        res.status(200).json({
+
+            success: true,
+
+            userData: data
+
+        });
+
+    })
+
 })
 
 app.post('/api/users/login', async (req, res) => {
