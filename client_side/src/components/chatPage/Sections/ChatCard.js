@@ -40,7 +40,9 @@ function ChatCard(props) {
                             />
                         :
                         <p>
+                            <b>
                             {props.message}
+                            </b>
                         </p>
                 }
                 datetime={

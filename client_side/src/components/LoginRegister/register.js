@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/user_actions';
-
+import background from "./signup.png";
 
 class Register extends Component {
     state = {
@@ -90,7 +90,9 @@ class Register extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container" style={{ 
+                backgroundImage: `url(${background})`
+                }}>
                 <h2>
                     Sign Up
                 </h2>
