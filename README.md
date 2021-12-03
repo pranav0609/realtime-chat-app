@@ -11,10 +11,20 @@ How to run:
 2) Enter your db variables in a file called dev.js and paste that file in server_side -> cofigurations
 3) In terminal enter the following commands one by one
     cd client_side
+    
+    
     npm install
+    
+    
     cd ..
+    
+    
     npm install
+    
+    
     npm run dev
+    
+    
 4) Go to localhost:3000
 
 
