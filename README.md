@@ -77,7 +77,7 @@ Functionalities included in the project (currently):
 ![image](https://user-images.githubusercontent.com/66993183/142037536-de7b4de4-cd1b-47af-bf56-888d9670a643.png)
 ![image](https://user-images.githubusercontent.com/66993183/142037602-c8f86cd2-9130-4e7b-bddc-9ad08087dbaa.png)
 
-
+Contributors: Pranav Patki (pranav0609), Raj Rathod (ArerehRaj), Divyam Patani (divyampatani)
 
 Further plans:
 1) Integrate video calling into the platform using WebRTC
