@@ -10,6 +10,8 @@ How to run:
 1) Clone the repo
 2) Enter your db variables in a file called dev.js and paste that file in server_side -> cofigurations
 3) In terminal enter the following commands one by one
+    
+    
     cd client_side
     
     
